@@ -88,7 +88,7 @@ def encode_dates(X):
     X["is_work_morning_peak"] = ((X['holiday'] == False) & (X['is_weekend'] == False) & (X["hour"].isin([7])))
     X["is_work_evening_peak"] = ((X['holiday'] == False) & (X['is_weekend'] == False) & (X["hour"].isin([16])))
 
-    return X.drop(columns=["date", "counter_installation_date"])
+    return X.drop(columns=["date","counter_installation_date"]) # date column is dropped in the main function
 
 
 def encode_and_standardize(df, label_encoder=None, scaler=None):
@@ -198,7 +198,7 @@ def preprocess_data(data, test_data, ext_data, df_holidays, df_lock):
 
 
 def train_model(X_train, Y_train):
-    model = XGBRegressor(max_depth=3, learning_rate=0.07596153273831288, n_estimators=1924)
+    model = XGBRegressor(max_depth=8, learning_rate=0.32047532795002825, n_estimators=1132)
     model.fit(X_train, Y_train)
 
     return model
