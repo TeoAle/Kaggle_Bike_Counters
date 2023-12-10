@@ -198,7 +198,7 @@ def preprocess_data(data, test_data, ext_data, df_holidays, df_lock):
 
 
 def train_model(X_train, Y_train):
-    model = XGBRegressor(max_depth=8, learning_rate=0.32047532795002825, n_estimators=1132)
+    model = XGBRegressor(max_depth=7, learning_rate=0.2935871234586509, n_estimators=104)
     model.fit(X_train, Y_train)
 
     return model
