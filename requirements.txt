@@ -1,0 +1,16 @@
+numpy
+pandas
+matplotlib
+seaborn
+pyarrow
+scikit-learn
+folium
+ipython
+jupyterlab
+geopy
+DateTime
+holidays
+scipy
+optuna
+lightgbm
+xgboost
